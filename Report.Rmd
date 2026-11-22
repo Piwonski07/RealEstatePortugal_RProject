@@ -44,3 +44,12 @@ data %>%
   miss_var_summary()
 
 ```
+```{r}
+gg_miss_span(
+  data,
+  Price,
+  span_every = 2000,
+  facet = Garage
+)
+```
+
