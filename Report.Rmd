@@ -13,9 +13,9 @@ data <- read_csv("Dane/real_estate_portugal.csv")
 
 Do napisania
 
+# 2. Czyszczenie danych
 
-
-# 2. Braki danych
+## 2.1. Braki danych
 ```{r}
 
 mcar_test(data[1:5000,])
@@ -54,4 +54,36 @@ gg_miss_span(
   facet = Garage
 )
 ```
+## 2.1 Spójność danych
+
+ZADANIE DOMOWE: Sprawdź, czy nie masz brudnych danych.
+
+Co może być błędem:
+1. Price:
+- < 0
+- musi być liczbą
+2. District, City, Town:
+- nie moze byc liczbą
+- musi byc w Portugalii
+- musi byc charem
+3. 
+
+
+
+```{r}
+
+```
+
+
+# 3.Podobieństwo
+
+```{r}
+
+```
+
+
+
+
+
+
 
