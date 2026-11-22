@@ -1,0 +1,46 @@
+---
+title: "Report"
+output: html_document
+---
+
+```{r}
+data <- read_csv("Dane/real_estate_portugal.csv")
+```
+
+# 1. Wprowadzenie
+
+Do napisania
+
+
+
+# 2. Braki danych
+```{r}
+
+mcar_test(data[1:5000,])
+
+vis_miss(data, warn_large_data = FALSE)
+
+```
+
+```{r}
+gg_miss_var(data, show_pct = TRUE)
+
+gg_miss_upset(data)
+
+```
+
+```{r}
+
+gg_miss_fct(data, fct = Parking)
+
+```
+
+```{r}
+unique(data$Parking)
+
+
+data %>%
+  group_by(Parking) %>%
+  miss_var_summary()
+
+```
