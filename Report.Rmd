@@ -4,6 +4,8 @@ output: html_document
 ---
 
 ```{r}
+library(tidyverse)
+library(naniar)
 data <- read_csv("Dane/real_estate_portugal.csv")
 ```
 
